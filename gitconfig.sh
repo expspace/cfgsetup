@@ -3,6 +3,8 @@ git config --global editor.core 'winpty nano'
 
 # alias
 git config --global alias.s 'status -s'
+git config --global alias.a 'add'
+git config --global alias.aa 'add .'
 git config --global alias.pu push
 git config --global alias.br branch
 git config --global alias.co checkout
