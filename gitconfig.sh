@@ -1,5 +1,5 @@
 # core
-git config --global editor.core 'winpty nano'
+git config --global editor.core 'nano'
 
 # alias
 git config --global alias.s 'status -s'
