@@ -26,5 +26,6 @@ git config --global alias.pll 'pull origin future'
 
 ## misc
 git config --global alias.ls 'log --pretty="format:%C(yellow)%h %C(cyan)%ad %C(green)%<(7,trunc)%aN %C(auto,reset)%s%C(auto,red)% gD% D" --date=short'
+git config --global alias.tags 'log --color --no-walk --tags --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 git config --global alias.stats 'shortlog -sne'
 git config --global alias.alias '!git config -l | grep alias | cut -c 7-'
