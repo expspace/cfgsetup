@@ -26,6 +26,8 @@ git config --global alias.pll 'pull origin future'
 
 ## reset
 git config --global alias.rh 'reset --hard'
+git config --global alias.rh1 'reset HEAD~1 --hard'
+git config --global alias.rh2 'reset HEAD~2 --hard'
 
 ## misc
 git config --global alias.ls 'log --pretty="format:%C(yellow)%h %C(cyan)%ad %C(green)%<(7,trunc)%aN %C(auto,reset)%s%C(auto,red)% gD% D" --date=short'
