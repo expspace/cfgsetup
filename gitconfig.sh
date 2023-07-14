@@ -1,5 +1,8 @@
 # TODO
 # pass branch names for main/develop (use as default) to script (replace devel/future)
+# delete all current aliases before setting
+# color git alias alias name
+
 
 # core
 git config --global editor.core 'nano'
