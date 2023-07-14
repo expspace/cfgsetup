@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+#
+# Git hook convenience script for automatically including ticket number in commit
+# title. Reads ticket number from branch name or exits if not found.
+#
+
+COMMIT_MSG_PATH=$1
+COMMIT_MSG=$(cat $COMMIT_MSG_PATH)
+COMMIT_TYPE=$2
+COMMIT_SHA=$3
+
+BRANCH=$(git symbolic-ref --short HEAD)
+TICKET_ID=$(echo $BRANCH | grep -oE 'CNX-[0-9]+' || exit 0)
+
+if [[ -z "$COMMIT_TYPE" ]]; then                          # git commit
+  echo -e "$TICKET_ID:\n$COMMIT_MSG" > $COMMIT_MSG_PATH
+elif [[ "$COMMIT_TYPE" == message ]]; then                # git commit -m or -F option
+  echo $TICKET_ID: $COMMIT_MSG > $COMMIT_MSG_PATH
+fi
+
+exit 0
