@@ -21,9 +21,9 @@ git config --global alias.ca 'commit --amend'
 
 ## branch
 git config --global alias.f fetch
-git config --global alias.br branch
-git config --global alias.brd 'branch -D'
-git config --global alias.brdm '!git branch --merged future | grep -Ev "devel|future" | xargs git branch --delete'
+git config --global alias.b branch
+git config --global alias.bd 'branch -D'
+git config --global alias.bdm '!git branch --merged future | grep -Ev "devel|future" | xargs git branch --delete'
 git config --global alias.co checkout
 git config --global alias.cob 'checkout -b'
 git config --global alias.pl pull
