@@ -12,6 +12,9 @@ COMMIT_SHA=$3
 BRANCH=$(git symbolic-ref --short HEAD)
 TICKET_ID=$(echo $BRANCH | grep -oE 'CNX-[0-9]+') || exit 0
 
+echo "Preparing commit message..."
+echo "Commit type:  $COMMIT_TYPE"
+
 if [[ -z "$COMMIT_TYPE" ]]; then                          # git commit
   echo -e "$TICKET_ID:\n$COMMIT_MSG" > $COMMIT_MSG_PATH
 elif [[ "$COMMIT_TYPE" == message ]]; then                # git commit -m or -F option
