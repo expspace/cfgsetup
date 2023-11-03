@@ -1,10 +1,11 @@
 #!/usr/bin/bash
 #
 # TODO
-# pass branch names for main/develop (use as default) to script (replace devel/future)
-# delete all current aliases before setting
+# extract branch specific commands to local gitconfig script
 # color git alias alias name
-#
+
+# removes all current aliases
+for alias in $(git config --get-regexp 'alias\..*' | cut -f 1 -d ' '); do git config --global --unset $alias; done
 
 # core
 git config --global editor.core 'nano'
