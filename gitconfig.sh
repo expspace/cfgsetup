@@ -8,7 +8,7 @@
 for alias in $(git config --get-regexp 'alias\..*' | cut -f 1 -d ' '); do git config --global --unset $alias; done
 
 # core
-git config --global editor.core 'nano'
+git config --global core.editor 'nano'
 
 # alias
 
