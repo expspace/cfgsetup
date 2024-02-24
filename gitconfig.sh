@@ -1,8 +1,4 @@
 #!/usr/bin/bash
-#
-# TODO
-# extract branch specific commands to local gitconfig script
-# color git alias alias name
 
 # removes all current aliases
 for alias in $(git config --get-regexp 'alias\..*' | cut -f 1 -d ' '); do git config --global --unset $alias; done
@@ -37,8 +33,8 @@ git config --global alias.rh1 'reset HEAD~1 --hard'
 git config --global alias.rh2 'reset HEAD~2 --hard'
 
 ## misc
-git config --global alias.ls 'log --pretty="format:%C(yellow)%h %C(cyan)%ad %C(green)%<(7,trunc)%aN %C(auto,reset)%s%C(auto,red)% gD% D" --date=short'
-git config --global alias.tags 'log --color --no-walk --tags --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+git config --global alias.ls 'log --pretty=format:"%C(yellow)%h %C(cyan)%ad %C(green)%<(7,trunc)%aN %C(auto,reset)%s%C(auto,red)% gD% D" --date=short'
+git config --global alias.tags 'log --pretty=format:"%C(brightred)%D %C(yellow)%h %C(cyan)%ad %C(green)%<(7,trunc)%aN %C(reset)%s" --decorate-refs=refs/tags/* --tags --no-walk --date=short'
 git config --global alias.stats 'shortlog --summary --numbered --email'
 git config --global alias.alias '!git config --list | grep -E '^alias' | cut -c 7-'
 git config --global alias.cl clone
