@@ -2,6 +2,8 @@
 
 # removes all current colors
 git config --global --remove-section color.status
+git config --global --remove-section color.diff
+git config --global --remove-section color.branch
 
 # palette
 git log --pretty=format:"
@@ -30,7 +32,14 @@ git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 
 ## diff
+git config --global color.diff.new "green"
+git config --global color.diff.meta "yellow"
+git config --global color.diff.frag "cyan"
+git config --global color.diff.old "red"
 
 ## branch
+git config --global color.branch.current "green"
+git config --global color.branch.local "yellow"
+git config --global color.branch.remote "cyan"
 
 ## log
