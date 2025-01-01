@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+# removes all current colors
+git config --global --remove-section color.status
+
+# palette
 git log --pretty=format:"
 %C(brightred)brightred%<|(25)%x20%C(reset) <avail>
 %C(red)red%<|(25)%x20%C(reset) <avail>
@@ -17,3 +21,16 @@ git log --pretty=format:"
 %C(white)white%<|(25)%x20%C(reset) <avail>
 %C(brightblack)brightblack%<|(25)%x20%C(reset) <avail>
 " -n 1
+
+# colors
+
+## status
+git config --global color.status.added "green"
+git config --global color.status.changed "yellow"
+git config --global color.status.untracked "cyan"
+
+## diff
+
+## branch
+
+## log
