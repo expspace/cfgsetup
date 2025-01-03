@@ -33,7 +33,7 @@ git config --global alias.rh1 'reset HEAD~1 --hard'
 git config --global alias.rh2 'reset HEAD~2 --hard'
 
 ## misc
-git config --global alias.ls 'log --pretty=format:"%C(yellow)%h %C(cyan)%ad %C(green)%<(7,trunc)%aN %C(auto,reset)%s%C(auto,red)% gD% D" --date=short'
+git config --global alias.ll 'log --pretty=format:"%C(yellow)%h %C(cyan)%cs %C(green)%<(7,trunc)%aN %C(auto)%s %C(auto)%d"'
 git config --global alias.tags 'log --pretty=format:"%C(brightred)%D %C(yellow)%h %C(cyan)%ad %C(green)%<(7,trunc)%aN %C(reset)%s" --decorate-refs=refs/tags/* --tags --no-walk --date=short'
 git config --global alias.stats 'shortlog --summary --numbered --email'
 git config --global alias.alias '!git config --list | grep -E '^alias' | cut -c 7-'
