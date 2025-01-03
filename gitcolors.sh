@@ -35,11 +35,9 @@ git config --global color.status.untracked "cyan"
 git config --global color.diff.new "green"
 git config --global color.diff.meta "yellow"
 git config --global color.diff.frag "cyan"
-git config --global color.diff.old "red"
+git config --global color.diff.old "brightred"
 
 ## branch
 git config --global color.branch.current "green"
 git config --global color.branch.local "yellow"
 git config --global color.branch.remote "cyan"
-
-## log
