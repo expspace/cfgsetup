@@ -11,6 +11,7 @@ git config --global core.editor 'nano'
 ## commit
 git config --global alias.s 'status --short --branch'
 git config --global alias.d 'diff'
+git config --global alias.ds 'diff --staged'
 git config --global alias.a 'add'
 git config --global alias.aa 'add --all'
 git config --global alias.c commit
