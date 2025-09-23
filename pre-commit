@@ -1,4 +1,16 @@
 #!/bin/sh
+#
+# Git hook convenience script for automatically formatting staged files with prettier
+#
+
+# Check if this is a merge commit
+if [ "$(git rev-parse --verify --quiet MERGE_HEAD)" ]; then
+    echo "This is a merge commit, skipping pre-commit checks"
+    exit 0
+fi
+
+echo "Preparing commit..."
+
 FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
 [ -z "$FILES" ] && exit 0
 
