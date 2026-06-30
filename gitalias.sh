@@ -34,9 +34,14 @@ git config --global alias.rh 'reset --hard'
 git config --global alias.rh1 'reset HEAD~1 --hard'
 git config --global alias.rh2 'reset HEAD~2 --hard'
 
+## stats
+git config --global alias.authors 'shortlog --summary --numbered --no-merges'
+git config --global alias.monthly '!git log --format='%ad' --date=format:'%Y-%m' | sort | uniq -c'
+git config --global alias.filechurn '!git log --format=format: --name-only --since="1 year ago" | sort | uniq -c | sort -nr | head -20'
+git config --global alias.bugchurn '!git log -i -E --grep="fix|bug|broken" --name-only --format='' | sort | uniq -c | sort -nr | head -20'
+
 ## misc
 git config --global alias.ll 'log --pretty=format:"%C(yellow)%h %C(cyan)%cs %C(green)%<(7,trunc)%aN %C(auto)%s %C(auto)%d"'
 git config --global alias.tags 'log --tags --no-walk --decorate-refs=refs/tags/* --pretty=format:"%C(auto)%D %C(yellow)%h %C(auto)%s %C(cyan)(%cr)"'
-git config --global alias.stats 'shortlog --summary --numbered --email'
 git config --global alias.alias '!git config --list | grep -E '^alias' | cut -c 7-'
 git config --global alias.cl clone
