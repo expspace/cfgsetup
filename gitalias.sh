@@ -27,7 +27,8 @@ git config --global alias.bdmf '!git fetch origin future && git branch --merged 
 git config --global alias.co checkout
 git config --global alias.cob 'checkout -b'
 git config --global alias.pl pull
-git config --global alias.pll 'pull origin future'
+git config --global alias.pof 'pull origin future'
+git config --global alias.pod 'pull origin devel'
 
 ## reset
 git config --global alias.rh 'reset --hard'
